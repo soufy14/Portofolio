@@ -16,13 +16,20 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>     
             </ul>
-            <!-- <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
+            <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <nav class="nav_bar">
+             <ul class="lien_bar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>     
+            </ul>
         </nav>
     </header>
     <main>
@@ -36,10 +43,10 @@
                     Je transforme des idées de design complexes en interfaces web performantes et réactives en utilisant HTML et CSS. 
                     Spécialisé dans le pixel-perfect et l'optimisation des pages web rapide et fiable.
                 <div class="icon">
-                    <div><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-                    <div><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div>
-                    <div><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-                    <div><a href="#"><i class="fa-brands fa-github"></i></a></div>
+                    <div><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a></div>
                 </div>
                 <div class="button">
                     <button>Download CV</button>
@@ -66,7 +73,7 @@
             </div>
             <div class="profit_2">
                 <div class="image_2">
-                    <img src="./undraw_stylish-girl-avatar_m8po.png" alt="">
+                    <img src="./undraw_drag-and-drop_v4po.png" alt="">
                 </div>
             </div>
         </section>
@@ -109,7 +116,9 @@
                 <h3>Latest <span>Projects</span></h3>
                 <div class="grids">
                     <div class="image_3">
-                        <img src="./portrait/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="">
+                        <a href="./portrait/christopher-gower-m_HRfLhgABo-unsplash.jpg">
+                            <img src="./portrait/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="">
+                        </a>
                     </div>
                     <div class="image_3">
                         <img src="./portrait/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="">
@@ -166,5 +175,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        const BarsMenu = document.querySelector('.bars')
+        const BarsICON = document.querySelector('.bars i')
+        const Menubar = document.querySelector('.lien_bar')
+
+        BarsMenu.onclick = function(){
+            Menubar.classList.toggle('open')
+            const isOpen = Menubar.classList.contains('open')
+            BarsICON.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>
