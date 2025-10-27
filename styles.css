@@ -110,7 +110,8 @@ header{
 .icon div:hover{
     background-color: #fff;
     box-shadow: 0 0 25px #f49818;
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
+    transform: scale(1.1);
 }
 div i{
     font-size: 2rem;
@@ -149,20 +150,16 @@ div i{
     border-radius: 50%;
     width: 450px;
     height: 450px;
-    animation: image 0.5s alternate 15 ;
+    cursor: pointer;
+    animation: image 4s ease-in-out infinite alternate;
 }
 @keyframes image {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.image_1:hover, .image_2:hover{
-    transform: scale(1.1);
-    opacity:0.8;
-    cursor: pointer;
+    form{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(25px);
+    }
 }
 .image_1 img{
     width: 100%;
@@ -219,10 +216,6 @@ div i{
     transition: 0.3s ease;
     cursor: pointer;
     box-shadow: 0 0 6px 2px #f49818;
-}
-.content_2 .button button:hover, 
-.conteneur .c_btn:hover{
-    transform: translate(30px);
 }
 /* ----------------------------------------------------------- */
 .section_3{
@@ -332,6 +325,15 @@ div i{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition:0.5s ease;
+}
+.cont_3 > *{
+    transform: translateY(100%);
+    
+}
+.cont_3:hover > *{
+    transform: translateY(0);
+    
 }
 .cont_3 a{
     text-decoration: none;
