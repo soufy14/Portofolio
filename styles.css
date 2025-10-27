@@ -153,10 +153,10 @@ div i{
 }
 @keyframes image {
   from {
-    transform: translateY(0);
+    transform: translateY(100%);
   }
   to {
-    transform: translateY(15px);
+    transform: translateY(0);
   }
 }
 .image_1:hover, .image_2:hover{
@@ -292,16 +292,56 @@ div i{
 }
 .grids .image_3{
    border-radius: 10px;
+    position: relative;
    overflow: hidden; 
 }
-.grids .image_3 img:hover {
-    color: #191f36;
-    opacity: 0.4;
-   
+.cont_3{
+    width: 100%;
+    height: 100%;
+    padding: 50px 50px 10px 50px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 17%, rgba(247, 161, 27, 0.74) 100%);
+    color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
 }
+.cont_3:hover{
+    opacity: 1;
+}
+.cont_3 h4{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.cont_3 p{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.cont_3 div{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_3 a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .grids .image_3 img{
     width: 100%;
     height: 100%; 
+   
 }
 /* ------------------------------------------------ */
 
@@ -423,7 +463,6 @@ input:hover{
 .lien_bar{
     display: none;
     height: 0;
-    /* height: 200px; */
     position: absolute;
     right: 1rem;
     top: 90px;
@@ -435,13 +474,10 @@ input:hover{
     font-size: 1.1rem;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.lien_bar.open{
-    height: 200px;
-}
-.lien_bar li a{
-    /* text-decoration: none;
-    color: #fff; */
-}
+/* .lien_bar.open{
+    height: 240px;
+} */
+
 .lien_bar li{
     list-style: none;
     padding: 13px;
@@ -449,7 +485,6 @@ input:hover{
     justify-content: center;
     align-items: center;
 }
-
 
 @media (max-width:1440px) {
     .section_4{
@@ -599,9 +634,9 @@ input:hover{
     gap: 4px;
     font-size: 1.2rem;
    } 
-   header{
+   /* header{
     background: none;
-   }
+   } */
    .lien{
     display: none;
    }
