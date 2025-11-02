@@ -284,17 +284,18 @@ div i{
     gap: 30px;
 }
 .grids .image_3{
-   border-radius: 10px;
+    border-radius: 10px;
     position: relative;
-   overflow: hidden; 
+    overflow: hidden; 
+    transition: 0.5s ease;
 }
 .cont_3{
     width: 100%;
     height: 100%;
     padding: 50px 50px 10px 50px;
     left: 0;
-    top: 0;
-    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 17%, rgba(247, 161, 27, 0.74) 100%);
+    bottom: -100%;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 27%, rgba(247, 161, 27, 0.74) 100%);
     color: #fff;
     position: absolute;
     display: flex;
@@ -302,11 +303,10 @@ div i{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    opacity: 0;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
-.cont_3:hover{
-    opacity: 1;
+.grids .image_3:hover .cont_3{
+    bottom: 0;
 }
 .cont_3 h4{
     font-size: 2rem;
@@ -326,14 +326,6 @@ div i{
     justify-content: center;
     align-items: center;
     transition:0.5s ease;
-}
-.cont_3 > *{
-    transform: translateY(100%);
-    
-}
-.cont_3:hover > *{
-    transform: translateY(0);
-    
 }
 .cont_3 a{
     text-decoration: none;
